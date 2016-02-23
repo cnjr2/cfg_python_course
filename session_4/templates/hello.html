@@ -1,0 +1,15 @@
+<!doctype html>
+
+<title>Hello from Flask</title>
+{% if name %}
+    <h1>Hello {{ name }}!</h1>
+{% endif %}
+
+<div id="contact-box">
+    <h2> Get In Touch!</h2>
+    <form method="post" action="/signup">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" value="" placeholder="Your Name" required="required" autofocus="autofocus" />
+        <input type="submit" value="Submit" id="submit-button" />
+    </form>
+</div>
