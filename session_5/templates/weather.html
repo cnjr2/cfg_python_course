@@ -1,0 +1,18 @@
+<!doctype html>
+
+<title>Local weather report</title>
+
+<h1>Local weather report</h1>
+
+<!-- this is the form to search for the weather based on a place -->
+<form action="/weather" method=post>
+    <input type=text name=weather value="" placeholder="e.g. London"></br>
+    <div class="actions"><input type=submit value="Search"></div>
+</form>
+
+<!-- this part is only active after you performed a search -->
+{% if weather_record %}
+    <h2>Local weather:</h2>
+
+    {{ weather_record }}
+{% endif %}
